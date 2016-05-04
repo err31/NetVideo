@@ -12,15 +12,15 @@ CFLAGS=-Wall
 .PHONY : all
 all : $(EXE) test
 
-# VideoStore
+# NetVideo
 .PHONY : run
 run : VideoStore
 	@./VideoStore
 
-VideoStore : $(OBJS)
+NetVideo : $(OBJS)
 	$(GCC) $^ -o $@
 
-VideoStore.o: VideoStore.cpp Video.hpp Rental.hpp Customer.hpp
+NetVideo.o: NetVideo.cpp Video.hpp Rental.hpp Customer.hpp
 	$(GCC) $(CFLAGS) -c $<
 
 # Video
