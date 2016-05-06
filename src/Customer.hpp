@@ -27,6 +27,8 @@ public:
     // customer rental statement
     std::string statement() const;
 
+    double amountFor(const Rental& r) const;
+
 private:
     std::string name;
     std::vector<Rental> rentals;
