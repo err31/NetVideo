@@ -49,7 +49,7 @@ double thisAmount = 0;
                 thisAmount += (it->getDaysRented() - 3) * 1.5;
             break;
         }
-        return 0;
+        return thisAmount;
 }
 
 // customer rental statement
