@@ -29,7 +29,7 @@ void Customer::addRental(const Rental& rental) {
     rentals.push_back(rental);
 }
 
-double amountFor(const Rental& r) const {
+double Customer::amountFor(const Rental& r) const {
 double thisAmount = 0;
         switch(r.getVideo().getCode()) {
 
@@ -61,7 +61,7 @@ std::string Customer::statement() const {
     result += "\n";
 
     // rentals
-    double totalAmount = 0;
+    double totalAmount = amountFor(*it);
     int frequentRenterPoints = 0;
     for (std::vector<Rental>::const_iterator it = rentals.begin(); it != rentals.end(); ++it) {
 
